@@ -4,7 +4,7 @@ typealias PassPort = MutableMap<String, String>
 
 class Day4(file: String) {
 
-    private val passports = mutableListOf<PassPort>()
+    val passports = mutableListOf<PassPort>()
 
     init {
         val text = javaClass.getResource(file).readText().trim()
@@ -27,7 +27,7 @@ class Day4(file: String) {
         }
     }
 
-    private fun containsAllKeys(pass: PassPort): Boolean {
+    fun containsAllKeys(pass: PassPort): Boolean {
         val necessaryKeys = listOf(
             "byr", "iyr", "eyr", "hgt", "hcl", "ecl", "pid"
         )
@@ -38,7 +38,7 @@ class Day4(file: String) {
         println("Part 1, number of correct passports: ${passports.count(::containsAllKeys)}")
     }
 
-    private fun verifyPassport(pass: PassPort): Boolean {
+    fun verifyPassport(pass: PassPort): Boolean {
         val yearRegex = Regex("(\\d{4})")
         val heightRegex = Regex("(\\d{2,3})(cm|in)")
         val colorRegex = Regex("#[0-9a-f]{6}")

@@ -16,6 +16,7 @@ repositories {
 
 dependencies {
     implementation(kotlin("stdlib"))
+    implementation(kotlin("test-junit"))
 }
 
 tasks.withType<Jar> {

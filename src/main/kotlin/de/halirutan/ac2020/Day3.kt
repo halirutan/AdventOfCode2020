@@ -26,7 +26,7 @@ class Day3(file: String) {
         }
     }
 
-    private fun solve(dx: Int, dy: Int): Int {
+    fun solve(dx: Int, dy: Int): Int {
         var count = 0
         val pts = Point(0, 0)
         val len = lines[0].length
